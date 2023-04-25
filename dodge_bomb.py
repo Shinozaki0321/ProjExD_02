@@ -71,6 +71,10 @@ def main():
             vy *= -1
         screen.blit(bb_img, bb_rct)
         if kk_rct.colliderect(bb_rct):
+            kk_img = pg.image.load("ex02/fig/8.png")
+            kk_img = pg.transform.rotozoom(kk_img, 0, 2.0)
+            screen.blit(kk_img, kk_rct)
+            clock.tick(0.5)
             return
 
         pg.display.update()
